@@ -11,6 +11,7 @@ import skimage.io as io
 from skimage.draw import polygon
 
 parser = argparse.ArgumentParser()
+
 parser.add_argument('--annotation_file', type=str, default='/Users/peterlin/SPADE/datasets/annotations/instances_val2017.json',
                     help="Path to the annocation file. It can be downloaded at http://images.cocodataset.org/annotations/annotations_trainval2017.zip. Should be either instances_train2017.json or instances_val2017.json")
 parser.add_argument('--input_label_dir', type=str, default="/Users/peterlin/SPADE/datasets/coco_stuff/val_label/",
