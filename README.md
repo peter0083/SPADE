@@ -19,6 +19,19 @@ Licensed under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-
 
 The code is released for academic research use only. For commercial use, please contact [researchinquiries@nvidia.com](researchinquiries@nvidia.com).
 
+## Peter's notes
+
+09Jun2019
+1. did `brew install libomp` or else PyTorch cannot run
+2. added 
+```python
+import os
+
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
+```
+to avoid `libiomp5.dylib` initialization error.
+3. changed relative file path to absolute file path in `coco_generate_instance_map.py` due to relative file path errors
+
 ## Installation
 
 Clone this repo.
