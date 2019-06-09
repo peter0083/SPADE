@@ -12,6 +12,11 @@ from models.pix2pix_model import Pix2PixModel
 from util.visualizer import Visualizer
 from util import html
 
+# avoid the mac issue of error 15 in running the test.py script
+# OMP: Error #15: Initializing libiomp5.dylib, but found libomp.dylib already initialized.
+# https://stackoverflow.com/questions/53014306/error-15-initializing-libiomp5-dylib-but-found-libiomp5-dylib-already-initial
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
+
 opt = TestOptions().parse()
 
 dataloader = data.create_dataloader(opt)
